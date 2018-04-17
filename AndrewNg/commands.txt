@@ -1,0 +1,67 @@
+who - shows current variables in scope
+whos - shows current variables in scope, as well as size, class, etc.
+
+clear 'variable' - remove variable
+clear - removes all variables
+
+load 'filename' - open data from filename
+save 'filename' - save data to filename
+save 'filename' v - save data to filename in binary format
+save 'filename' v -ascii - save data to filename in human readable format
+
+A(2,:) - get everything in second column
+
+[val, ind] = max(A) - gives value and index of the max value in A
+
+for a = [1 15 2 5], doing a < 3 gives a boolean array showing what values are shorter than a
+find(condition) - returns all values matching condition
+magic(val) - returns magic matrix. All rows, columns and diagonals return the same value
+sum(a) - sums values of a
+prod(a) - product values of a
+floor and ciel - returns values, rounded down or up
+max(A,B) - returns matrix consisting of the highest values of A and B
+
+
+-----------------------------------------------------------
+Plotting data
+plot(x,y) - plots 
+plot(x,y); hold on - plot new figures on old
+
+-----------------------------------------------------------
+Control statements
+
+for i = 1:10,
+	v(i) = 2^i;
+end;
+
+while i < 5,
+	v(i) = 100;
+	i = i+1;
+	if i == 6,
+		break;
+	end;
+	elseif something,
+	end;
+	else,
+	end;
+end;
+
+
+-----------------------------------------------------------
+Defining a function
+
+function y = squareThisNumber(x)
+	y = x^2
+	% y is the value that is returned
+	% squareThisNumber is the name of the function
+
+
+addpath('') - add directory to octave search path
+
+
+-----------------------------------------------------------
+Vectorization
+
+Don't bother with summing vector products (such as the sum of theta*x). Do the vectorized implementation to optimize code and performance
+
+
