@@ -20,8 +20,18 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
-
-
+for i = 1:size(X)
+  distance = Inf;
+  for j = 1:K
+    %diff = sum((X(i,:) - centroids(j,:)) .^ 2);
+    diff = norm(X(i,:) - centroids(j,:)) .^ 2;
+    if diff < distance
+      distance = diff;
+      idx(i) = j;
+    end
+  end
+end
+   
 
 
 
